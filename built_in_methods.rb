@@ -36,8 +36,9 @@
 # The start_with? method returns true if the data in the first_name variable starts with the argument passed in.
 # In this example, the return value is true, because "Jeff" does start with "J".
 # The puts command prints the return value of the start_with? method (true) to the console.
-first_name = "Jeff"
-puts first_name.start_with?("J")
+
+# first_name = "Jeff"
+# puts first_name.start_with?("J")
 
 
 
@@ -46,7 +47,16 @@ puts first_name.start_with?("J")
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Integer.html
 # Include comments above each method call explaining the impact and return value of that method.
+num1 = 20
+num2 = 25
 
+#Using the sqrt method, which is called on Math will return the square root of the var/int passed in as an argument to the method. It will return a float value.
+puts Math.sqrt(num1)
+puts Math.sqrt(num2)
+
+#Using the comparing method (>) will check if self is less than the given value. In this case I will compare num1 to num2, and num1 to 19. Both will return a boolean value of true or fales. 
+puts num1 > num2
+puts num1 > 19
 
 
 # SECTION 4: Calling methods on variables assigned to arrays.
@@ -54,3 +64,12 @@ puts first_name.start_with?("J")
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+fruit_arr = ["Apple", "Banana", "Peach", "Plumb", "Grape"]
+num_arr = [100, 23, 46, 23, 282, 96, 46, 282]
+
+#The method .uniq is a "non-destructiv" way to remove duplicate elements from an arry. Calling this method on the num_arr will remove the duplicate elements in the array. Ill store the returned value to new_num_arr. Puts will display the new array without duplicates.
+new_num_arr = num_arr.uniq 
+puts new_num_arr
+
+#Using the Array#[] method is useful for accessing an array at the given index. In this example I will call the array method onto my fruit_arr array to access the third element being plumb. Puts will return Plumb to the console.
+puts fruit_arr[3]
