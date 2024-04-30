@@ -10,11 +10,11 @@
 # How many arguments did you pass your method? I chose to put one parameter that when passed an argument of the strings "hi", "hey", or "hello", will return a custom greeting. Three total arguments were passed and stored under variables greeting1, greeting2, and greeting3.
 def greeting(user_greet)  
         if user_greet == "hi"
-            puts "hi there"
+            return "hi there"
         elsif user_greet == "hey"
-            puts "hey there"
+            return "hey there"
         elsif user_greet == "hello"
-            puts "hello there *obiwan voice*"
+            return "hello there *obiwan voice*"
         end
     end
 
@@ -23,6 +23,9 @@ def greeting(user_greet)
  greeting2 = greeting("hey")
  greeting3 = greeting("hello")
  
+ puts greeting1
+ puts greeting2
+ puts greeting3
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
 
@@ -31,11 +34,14 @@ def greeting(user_greet)
 # What data type was your argument(s)? Both arguments were strings.
 
 def custom_greeting(name)
-    puts "Hello #{name}, how are you today?"
+    return "Hello #{name}, how are you today?"
 end
 
 name1 = custom_greeting("Tyler")
 name2 = custom_greeting("C'elle")
+
+puts name1
+puts name2
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
 
 # What is the return value of your method? Puts returned the values of "Tyler Matthew Noble" and "C'elle Marie Cordova".
@@ -43,12 +49,14 @@ name2 = custom_greeting("C'elle")
 # What data type was your argument(s)? all of my arguments were strings.
 
 def greet_person(first, middle, last)
-    puts "Your first name is #{first}, middle name is #{middle}, and last name is #{last}. Hello #{first} #{middle} #{last}!"
+    return "Your first name is #{first}, middle name is #{middle}, and last name is #{last}. Hello #{first} #{middle} #{last}!"
 end
 
 greet_person1 = greet_person("Tyler", "Matthew", "Noble")
 greet_person2 = greet_person("C'elle", "Marie", "Cordova")
 
+puts greet_person1
+puts greet_person2
 # 4: Write a method named square that takes in one integer, and returns the square of that integer.
 # Bonus: Print a sentence that interpolates the return value of your square method.
 
@@ -58,21 +66,24 @@ greet_person2 = greet_person("C'elle", "Marie", "Cordova")
 
 def square(num)
     squarert = Math.sqrt(num)
-    puts "The square root of #{num} is #{squarert}"
+    return "The square root of #{num} is #{squarert}"
 end
 
 answer1 = square(25)
 answer2 = square(100)
 
+puts answer1
+puts answer2
+
 # 5: Write a method named check_stock that satisfies the following interaction pattern:
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
 def check_stock(stock_num, stock_name)
     if stock_num >= 4
-        puts "#{stock_name} is stocked"
+        return "#{stock_name} is stocked"
     elsif stock_num < 4 && stock_num >=1
-        puts "#{stock_name} - running LOW"
+        return "#{stock_name} - running LOW"
     else stock_num == 0
-        puts "#{stock_name} - OUT of stock!"
+        return "#{stock_name} - OUT of stock!"
     end
 
 end
@@ -81,6 +92,9 @@ current_coffee_stock = check_stock(4, "Coffee")
 current_tortilla_stock = check_stock(3, "Tortillas")
 current_cheese_stock = check_stock(0, "Cheese")
 
+puts current_coffee_stock
+puts current_tortilla_stock
+puts current_cheese_stock
 
 # check_stock(4, "Coffee");
 # => "Coffee is stocked"
