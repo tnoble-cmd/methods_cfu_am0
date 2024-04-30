@@ -29,7 +29,7 @@ def greeting(user_greet)
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
 
-# What is the return value of your method? Puts returned the values of "Tyler" and "C'elle".
+# What is the return value of your method? the return value of the function definition will return, the string object with a string interpolation with a passed argument. 
 # How many arguments did you pass your method? Two arguments were passed to my method custom_greeting and stored under variables name1 and name 2.
 # What data type was your argument(s)? Both arguments were strings.
 
@@ -60,7 +60,8 @@ puts greet_person2
 # 4: Write a method named square that takes in one integer, and returns the square of that integer.
 # Bonus: Print a sentence that interpolates the return value of your square method.
 
-# What is the return value of your method? Puts will the return the evalued result of invoking the method square. Passing in the corresponding aruments (per variable) into the the method definition. the argument is then passed into the method Math.sqrt and assigned to the variable squarert. Puts then prints the string "The square root of" (original argument) "is" (the evaluated result of the variable squarert). 
+# What is the return value of your method? The return value of this method will return the value of a string object with 2 string interpolations. The first interpolation will take the value of the original passed in argument, while the second will take
+# the evaluated result of invoking Math.sqrt method onto the passed in argument and assigning it to the variable sqarert.  
 # How many arguments did you pass your method? one argument was passed for the method square.
 # What data type was your argument(s)? the datatypes are intergers.
 

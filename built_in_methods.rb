@@ -6,23 +6,24 @@
 # The downcase method is called on the string object "Hello World"
 # No arguments are passed; downcase has one clear job which is to lowercase all letters that exist in the String
 # The return value is "hello world"
-"Hello World".downcase
+puts "Hello World".downcase
+# Passing the method.downcase onto the string object "Hello World" will remove any capitalization withing the string.
+
+puts "Hello World".include?("Hello")
+# Passing the method .include? onto the string object "Hello World" with the argument "Hello" checks if the string includes "Hello". True
+
+puts "Hello World".end_with?("Hello")
+# Passing the method .end_with? onto the string object "Hello World" with the argument "Hello" checks if the string ends with Hello. False
 
 
-"Hello World".include?("Hello")
+puts "Hello World".end_with?("rld")
+# Passing the method .end_with? onto the string object "Hello World" with the argument "rld" checks if the string at any point ends with rld. True
 
+puts 12.even?
+# passing the method .even? onto the interger 12 checks if this interger is has an even value. True
 
-"Hello World".end_with?("Hello")
-
-
-"Hello World".end_with?("rld")
-
-
-12.even?
-
-
-18.next
-
+puts 18.next
+# passing the method .next onto the interger 18 increments and returns the new value of 19.
 
 
 # SECTION 2: Calling methods on variables assigned to strings.
@@ -31,14 +32,24 @@
 # https://ruby-doc.org/core-3.1.0/String.html
 # Include comments above each method call explaining the impact and return value of that method.
 
+name1_var = "My name is Tyler"
+name2_var = "Her name is C'elle"
+
+# passing the method .length onto the variable name1_var checks the string objects length that is assigned to the variable. Returns 16.
+puts name1_var.length
+
+# passing the method .slice! with the argument 12..19 onto the variable name2_var will return the substrings value at the given index 12 - 19. Returns the substring C'elle.
+puts name2_var.slice!(12..19)
+
+
 # EXAMPLE
 # The start_with? method is called on the first_name variable, which stores the string object "Jeff". 
 # The start_with? method returns true if the data in the first_name variable starts with the argument passed in.
 # In this example, the return value is true, because "Jeff" does start with "J".
 # The puts command prints the return value of the start_with? method (true) to the console.
 
-# first_name = "Jeff"
-# puts first_name.start_with?("J")
+first_name = "Jeff"
+puts first_name.start_with?("J")
 
 
 
